@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "dose"
+version = "0.1.0"
+description = "GE Starguide phantom example"
+authors = ["Jeff VanOss"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipykernel = "^6.26.0"
+simpleitk = "^2.3.0"
+pydicom = "^2.4.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+mypy = "^1.5.1"
+pre-commit = "^3.3.3"
+isort = "^5.12.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+target-version = ['py310']
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
